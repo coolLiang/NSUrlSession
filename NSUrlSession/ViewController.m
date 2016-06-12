@@ -77,6 +77,14 @@
     [dataTask resume];
 }
 
+/**
+ *   1.上传的数据需要用分割标识进行分开。并且在结尾处要用--分割标识--结束上传动作。
+ *   2.上传数据中name相关数据输入时要用“”.\"%@\"。
+ *   3.数据上传时。要有name.value2个字段。都appendFormat在一个字符串下。
+ *   4.文件上传时。要有filename.name.以及minitype字段传入。并且最后需要将文件data.附加在总data中。
+ *   5.每个数据进行上传时。都需要\r\n来进行换行。！
+ *
+ **/
 -(NSData *)getFortDataFromFileDict:(NSDictionary *)files andPramaDict:(NSDictionary *)parmas
 {
     
